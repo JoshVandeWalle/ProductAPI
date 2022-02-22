@@ -1,0 +1,15 @@
+# Spring config
+spring:
+  # Spring data config
+  data:
+    # Mongo DB config
+    mongodb:
+      # database connection string
+      uri: mongodb+srv://john117:chief@cluster0.phxhq.mongodb.net/cst339?retryWrites=true&w=majority
+      # DB name
+      database: ProductApp
+
+# Spring Doc is used to automatically generate Swagger OAS 3 documentation
+springdoc:
+  # set the default media type
+  default-produces-media-type: application/json
