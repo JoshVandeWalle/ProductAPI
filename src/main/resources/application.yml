@@ -13,3 +13,12 @@ spring:
 springdoc:
   # set the default media type
   default-produces-media-type: application/json
+
+---
+spring:
+  profiles: dev
+  data:
+    # Mongo DB config
+    mongodb:
+      # DB name
+      database: ProductAppTest

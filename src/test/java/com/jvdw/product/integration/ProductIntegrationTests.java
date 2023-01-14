@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.*;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  * and run the app on a random port
  */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@ActiveProfiles("dev")
 public class ProductIntegrationTests
 {
     // capture the random port used
@@ -95,7 +97,7 @@ public class ProductIntegrationTests
         HttpEntity<String> entity = new HttpEntity<String>(null, headers);
         // send request and capture response
         ResponseEntity<RestDto> response = restTemplate.exchange(
-                createURLWithPort("/product/620c8c44e136fd50c99323be"), HttpMethod.GET, entity, RestDto.class);
+                createURLWithPort("/product/63c2fee3c1324b6febcd6222"), HttpMethod.GET, entity, RestDto.class);
 
         // assertions
         // assert OK response status code
@@ -150,7 +152,7 @@ public class ProductIntegrationTests
     public void correctProductThatExistsWithValidProduct()
     {
         // instantiate a ProductModel to send with request
-        ProductModel product = new ProductModel("620c8c44e136fd50c99323be","Name Corrected by Integration Test", "Featuring Tom Bombadil", BigDecimal.valueOf(19.54), 22);
+        ProductModel product = new ProductModel("63c2fee3c1324b6febcd6222","Name Corrected by Integration Test", "Featuring Tom Bombadil", BigDecimal.valueOf(19.54), 22);
         // instantiate an HttpEntity to send with request
         HttpEntity<ProductModel> entity = new HttpEntity<>(product, headers);
         // send request and capture response

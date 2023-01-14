@@ -34,6 +34,11 @@ public class ProductEntity
     // product quantity
     private int quantity;
 
+    public ProductEntity(String id)
+    {
+        this.id = id;
+    }
+
     /**
      * This constructor is used to initialize all fields except the ID
      * @param name the product's name
