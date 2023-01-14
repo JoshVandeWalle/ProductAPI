@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -35,7 +36,7 @@ public class ProductBusinessUnitTests
      * This method runs before the test suite
      */
     @BeforeEach
-    void initUseCase()
+    void init()
     {
         // initialize service to be tested
         service = new ProductBusinessService();
@@ -97,7 +98,7 @@ public class ProductBusinessUnitTests
 
         // assertions
         // assert that no product is returned
-        assertEquals(null, product);
+        assertNull(product);
     }
 
     /**
