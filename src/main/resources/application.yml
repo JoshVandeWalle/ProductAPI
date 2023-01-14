@@ -5,7 +5,7 @@ spring:
     # Mongo DB config
     mongodb:
       # database connection string
-      uri: mongodb+srv://john117:chief@cluster0.phxhq.mongodb.net/cst339?retryWrites=true&w=majority
+      uri: WITHHELD
       # DB name
       database: ProductApp
 
