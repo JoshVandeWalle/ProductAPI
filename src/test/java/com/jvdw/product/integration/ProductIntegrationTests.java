@@ -13,6 +13,7 @@ import org.springframework.http.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -149,7 +150,7 @@ public class ProductIntegrationTests
     public void correctProductThatExistsWithValidProduct()
     {
         // instantiate a ProductModel to send with request
-        ProductModel product = new ProductModel("620c8c44e136fd50c99323be","The Lord of the Rings", "Featuring Tom Bombadil", BigDecimal.valueOf(19.54), 22);
+        ProductModel product = new ProductModel("620c8c44e136fd50c99323be","Name Corrected by Integration Test", "Featuring Tom Bombadil", BigDecimal.valueOf(19.54), 22);
         // instantiate an HttpEntity to send with request
         HttpEntity<ProductModel> entity = new HttpEntity<>(product, headers);
         // send request and capture response
@@ -161,6 +162,8 @@ public class ProductIntegrationTests
         assertEquals(HttpStatus.OK, response.getStatusCode());
         // assert the corrected product is not null
         assertNotEquals(null, response.getBody().getData().get(0));
+        // assert that the edit was made
+        assertEquals("Name Corrected by Integration Test", ((LinkedHashMap)response.getBody().getData().get(0)).get("name"));
     }
 
     /**
