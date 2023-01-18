@@ -1,6 +1,6 @@
 # ProductAPI demonstration of full unit and E2E Integration test + Automatic Swagger documentation
 
-Built with Spring Boot, Maven, Java, and MongoDB Atlas, and Heroku.
+Built with Spring Boot, Maven, Java, and MongoDB Atlas, and Railway.
 
 ### Testing
 This application uses the capabilities of Spring Boot to bootstrap an 
