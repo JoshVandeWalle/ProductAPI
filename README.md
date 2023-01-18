@@ -10,5 +10,5 @@ test dependency.
 
 ### Swagger Doc Generation
 Spring Doc is used to automatically generate Swagger OAS 3 API 
-documentation. Docs can be accessed [here](https://product-api-demo.herokuapp.com/swagger-ui/index.html).
+documentation. Docs can be accessed [here](https://productapi-production-4ccd.up.railway.app/swagger-ui/index.html).
 
