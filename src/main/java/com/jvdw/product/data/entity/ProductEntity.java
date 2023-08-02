@@ -1,6 +1,4 @@
 package com.jvdw.product.data.entity;
-
-import com.jvdw.product.model.ProductModel;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
