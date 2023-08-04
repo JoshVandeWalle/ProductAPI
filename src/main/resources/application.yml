@@ -16,7 +16,7 @@ springdoc:
 
 ---
 spring:
-  profiles: dev
+  activate-on-profile: dev
   data:
     # Mongo DB config
     mongodb:
