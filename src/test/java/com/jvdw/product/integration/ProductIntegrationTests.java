@@ -97,7 +97,7 @@ public class ProductIntegrationTests
         HttpEntity<String> entity = new HttpEntity<String>(null, headers);
         // send request and capture response
         ResponseEntity<RestDto> response = restTemplate.exchange(
-                createURLWithPort("/product/63c2fee3c1324b6febcd6222"), HttpMethod.GET, entity, RestDto.class);
+                createURLWithPort("/product/63c3034e9399564091f8c722"), HttpMethod.GET, entity, RestDto.class);
 
         // assertions
         // assert OK response status code
@@ -152,7 +152,7 @@ public class ProductIntegrationTests
     public void correctProductThatExistsWithValidProduct()
     {
         // instantiate a ProductModel to send with request
-        ProductModel product = new ProductModel("63c2fee3c1324b6febcd6222","Name Corrected by Integration Test", "Featuring Tom Bombadil", BigDecimal.valueOf(19.54), 22);
+        ProductModel product = new ProductModel("63c3034e9399564091f8c722","Name Corrected by Integration Test", "Featuring Tom Bombadil", BigDecimal.valueOf(19.54), 22);
         // instantiate an HttpEntity to send with request
         HttpEntity<ProductModel> entity = new HttpEntity<>(product, headers);
         // send request and capture response

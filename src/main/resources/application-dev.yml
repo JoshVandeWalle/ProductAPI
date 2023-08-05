@@ -6,7 +6,7 @@ spring:
     mongodb:
       # database connection string
       uri: mongodb+srv://jvdw20152022:hIQJm7EOpt68vqbq@cluster0.phxhq.mongodb.net/cst339?retryWrites=true&w=majority
-      database: ProductApp
+      database: ProductAppTest
 # Spring Doc is used to automatically generate Swagger OAS 3 documentation
 springdoc:
   # set the default media type
